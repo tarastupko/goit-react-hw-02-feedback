@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+
 import { Button, List } from "./FeedbackOptions.styled"
 import { getColor } from "./buttonColor"
 import PropTypes from "prop-types";
@@ -13,4 +13,8 @@ export const FeedbackOptions = ({ options,onLeaveFeedback }) => {
         ))}
         </List>
     )
+}
+FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired
 }
